@@ -1,1 +1,110 @@
-"Hello World" 
+<style type="text/css">
+.lb-company-info{float:left;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;background-color:rgba(0,0,0,.6);height:195px;width:335px}
+.lb-item-group{color:#fff}
+.lb-item-group .lb-item-list-group .lb-item-list-title>span{display:inline-block;padding:1px 8px;background-color:#2175db;font-size:12px;color:#fff;border-top-right-radius:2px;-webkit-border-top-right-radius:2px;-moz-border-radius-topright:2px;border-top-left-radius:2px;-webkit-border-top-left-radius:2px;-moz-border-radius-topleft:2px}
+.lb-item-group .lb-item-list-group{margin:10px}	
+.lb-item-group .lb-item-list-group .lb-item-list-title{border-bottom:#2175db 1px solid}
+.lb-company-info-title{height:32px;margin-bottom:10px;border-top-right-radius:6px;-webkit-border-top-right-radius:6px;-moz-border-radius-topright:6px;border-top-left-radius:6px;-webkit-border-top-left-radius:6px;-moz-border-radius-topleft:6px;background-color:#1753AA;color:#fff}
+.lb-company-info-title>a.btn-in{color:#fff;float:right;padding:0 10px;text-decoration:none}
+.lb-company-info-title span{line-height:32px;font-size:14px;padding-left:10px}
+.wp-enter{height:100%;float:right;border-left:2px solid #256EFF}
+.lb-company-info-body{padding:20px;overflow:hidden}
+.lb-company-info-item{float:left;overflow:hidden;width:33%;text-align:center}
+lb-company-info-item .lb-info-title{line-height:20px;width:70px;display:inline-block;border:1px solid #fff;color:#fff;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}
+.lb-company-info-item>div:last-child{padding:10px 0}
+.lb-company-info-item .lb-info-Value{color:#01FAFF;font-size:16px}
+.lb-company-info-item .lb-info-unit{color:#fff;font-size:12px}
+.lb-legend .lb-all-select{box-shadow:1px 2px 3px 0 rgba(255,255,255,.5) inset,-2px -1px 5px 0 #000 inset,1px 2px 5px rgba(0,0,0,.5)}
+			.lb-legend{position:absolute;border:1px solid #1753AA;cursor:pointer;top:55%;right:25%;background-color:rgba(255,255,255,.1);-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}
+			.lb-legend .lb-all-select{cursor:pointer;color:#fff;display:inline-block;background-color:#2175db;padding:2px 8px;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;-webkit-box-shadow:1px 2px 3px 0 rgba(255,255,255,.5) inset,-2px -1px 5px 0 #000 inset,1px 2px 5px rgba(0,0,0,.5)}
+		    .lb-legend .wp-all-select{border-top-right-radius:4px;-webkit-border-top-right-radius:4px;-moz-border-radius-topright:4px;border-top-left-radius:4px;-webkit-border-top-left-radius:4px;-moz-border-radius-topleft:4px;text-align:center;line-height:24px;width:100%;height:24px;color:#fff;background-color:#2175DB}
+			.lb-legend .lb-legend-item{color:#fff;font-size:14px;line-height:20px;cursor:pointer;margin:10px}	
+			.lb-legend .lb-legend-item:first-child{margin-top:0}
+			.lb-legend .lb-legend-item .lb-legend-circle{display:inline-block;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;width:12px;height:12px;background-color:#fff;margin-right:5px;margin-top:3px}
+			.lb-legend .lb-legend-item.unselected span:first-child{background-color:gray!important}
+			.lb-legend .lb-legend-item.unselected span:last-child{color:grey!important}
+			.lb-legend .lb-all-select{color:#fff;display:inline-block;background-color:#2175db;padding:2px 8px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}
+			.lb-legend .lb-legend-item{color:#fff;font-size:14px;line-height:20px;margin-top:10px}
+			.lb-legend .lb-legend-item:first-child{margin-top:0}
+			.lb-legend .lb-legend-item .lb-legend-circle{display:inline-block;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;width:12px;height:12px;background-color:#fff;margin-right:5px;margin-top:3px}
+	.lb-legend .lb-legend-item.unselected span:first-child{background-color:gray!important}
+	.lb-legend .lb-legend-item.unselected span:last-child{color:grey!important}
+</style>
+<div class="lb-company-info">
+			<div class=" lb-item-group">
+				<div class="lb-company-info-title">
+					<span ng-bind="companyInfo.companyName" class="ng-binding">阜南百奥迈斯(建设)</span>
+					<!-- ngIf: companyInfo.companyUrl -->
+				</div>
+				<div class="lb-company-info-body">
+					<div class="lb-company-info-item">
+						<div>
+							<span class="lb-info-title">总投资额</span>
+						</div>
+						<div>
+							<span class="lb-info-Value ng-binding" ng-bind="companyInfo.investment">0.2</span>
+							<span class="lb-info-unit">亿元</span>
+						</div>
+					</div>
+					<div class="lb-company-info-item">
+						<div>
+							<!-- ngIf: companyInfo.stage=='运营' -->
+							<!-- ngIf: companyInfo.stage!='运营' --><span class="lb-info-title ng-scope" ng-if="companyInfo.stage!='运营'" style="width: 100px;">预计投产时间</span><!-- end ngIf: companyInfo.stage!='运营' -->
+						</div>
+						<div>
+							<span class="lb-info-Value ng-binding" ng-bind="companyInfo.year">2018</span><span class="lb-info-unit">年</span>
+							<span class="lb-info-Value ng-binding" ng-bind="companyInfo.month">9</span><span class="lb-info-unit">月</span>
+						</div>
+					</div>
+					<div class="lb-company-info-item">
+						<div>
+							<span class="lb-info-title">日处理量</span>
+						</div>
+						<div>
+							<span class="lb-info-Value ng-binding" ng-bind="companyInfo.throughput">10</span>
+							<span class="lb-info-unit">吨</span>
+						</div>
+					</div>
+					<div class="lb-company-info-item">
+						<div>
+							<span class="lb-info-title">规模</span>
+						</div>
+						<div>
+							<span class="lb-info-Value ng-binding" ng-bind="companyInfo.scale">0.3</span>
+							<span class="lb-info-unit">万吨</span>
+						</div>
+					</div>
+					<!-- ngIf: companyInfo.stage=='运营' -->
+				</div>
+			</div>
+		</div>
+		
+		<style type="text/css">
+			
+	</style>
+		
+		
+		<div class="lb-legend ng-scope" ng-if="!industryId">
+		<div class="wp-all-select" ng-click="clickLegend('环保能源')">环保能源</div>
+		<!-- ngRepeat: item in legend --><div class="lb-legend-item ng-scope" ng-repeat="item in legend" ng-click="clickLegend(item)" ng-class="{'unselected':(item.industryName!==currentIndustry&amp;&amp;currentIndustry!=='环保能源')}" style="">
+			<span class="lb-legend-circle" ng-style="{backgroundColor:item.color}" style="background-color: rgb(251, 192, 45);"></span>
+			<span ng-bind="item.industryName" class="ng-binding">生活垃圾</span>
+		</div><!-- end ngRepeat: item in legend --><div class="lb-legend-item ng-scope" ng-repeat="item in legend" ng-click="clickLegend(item)" ng-class="{'unselected':(item.industryName!==currentIndustry&amp;&amp;currentIndustry!=='环保能源')}">
+			<span class="lb-legend-circle" ng-style="{backgroundColor:item.color}" style="background-color: rgb(62, 212, 255);"></span>
+			<span ng-bind="item.industryName" class="ng-binding">生物废弃物</span>
+		</div><!-- end ngRepeat: item in legend --><div class="lb-legend-item ng-scope" ng-repeat="item in legend" ng-click="clickLegend(item)" ng-class="{'unselected':(item.industryName!==currentIndustry&amp;&amp;currentIndustry!=='环保能源')}">
+			<span class="lb-legend-circle" ng-style="{backgroundColor:item.color}" style="background-color: rgb(220, 231, 117);"></span>
+			<span ng-bind="item.industryName" class="ng-binding">热电联产</span>
+		</div><!-- end ngRepeat: item in legend --><div class="lb-legend-item ng-scope" ng-repeat="item in legend" ng-click="clickLegend(item)" ng-class="{'unselected':(item.industryName!==currentIndustry&amp;&amp;currentIndustry!=='环保能源')}">
+			<span class="lb-legend-circle" ng-style="{backgroundColor:item.color}" style="background-color: rgb(0, 191, 140);"></span>
+			<span ng-bind="item.industryName" class="ng-binding">餐厨污泥</span>
+		</div><!-- end ngRepeat: item in legend --><div class="lb-legend-item ng-scope" ng-repeat="item in legend" ng-click="clickLegend(item)" ng-class="{'unselected':(item.industryName!==currentIndustry&amp;&amp;currentIndustry!=='环保能源')}">
+			<span class="lb-legend-circle" ng-style="{backgroundColor:item.color}" style="background-color: rgb(255, 255, 255);"></span>
+			<span ng-bind="item.industryName" class="ng-binding">收运一体化</span>
+		</div><!-- end ngRepeat: item in legend --><div class="lb-legend-item ng-scope" ng-repeat="item in legend" ng-click="clickLegend(item)" ng-class="{'unselected':(item.industryName!==currentIndustry&amp;&amp;currentIndustry!=='环保能源')}">
+			<span class="lb-legend-circle" ng-style="{backgroundColor:item.color}" style="background-color: rgb(102, 187, 106);"></span>
+			<span ng-bind="item.industryName" class="ng-binding">再生资源</span>
+		</div><!-- end ngRepeat: item in legend -->
+	</div>
+	
+	
